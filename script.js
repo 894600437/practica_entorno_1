@@ -1,4 +1,29 @@
-function msj() {
-  document.getElementById("saludo").innerHTML = " TIID_04_01 JavaScript"; Event: debugger;
-  document.getElementById("demo").innerHTML = "<h2>Hello Worls</h2>";
+function abrirModal() {
+
+    document.getElementById("miModal").style.display = "block";
+
+}
+
+
+function cerrarModal() {
+
+    document.getElementById("miModal").style.display = "none";
+
+}
+
+
+function confirmarReserva() {
+
+    document.getElementById("mensaje").innerHTML =
+        "¡Reserva realizada correctamente!";
+
+}
+
+
+function confirmarDesdeModal() {
+
+    cerrarModal();
+
+    confirmarReserva();
+
 }

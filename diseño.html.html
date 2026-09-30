@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reserva de espacios</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <h2 class="navbar-titulo">
+                AutoPark
+            </h2>
+
+            <div class="navbar-botones">
+
+                <button type="button">
+                    Inicio
+                </button>
+
+                <button type="button">
+                    Reservar
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CONTENEDOR PRINCIPAL -->
+
+    <main class="container">
+
+
+        <!-- ENCABEZADO -->
+
+        <div class="encabezado">
+
+            <h1>
+                Reservar espacio
+            </h1>
+
+            <p>
+                Consulta y reserva un espacio de estacionamiento.
+            </p>
+
+        </div>
+
+
+        <!-- ALERT -->
+
+        <div class="alert">
+
+            <strong>Información:</strong>
+
+            Completa los datos para realizar tu reserva.
+
+        </div>
+
+
+        <!-- FILA -->
+
+        <div class="row">
+
+
+            <!-- COLUMNA DEL FORMULARIO -->
+
+            <div class="columna">
+
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <h2>
+                        Datos de reserva
+                    </h2>
+
+
+                    <!-- FORMULARIO -->
+
+                    <form>
+
+
+                        <label for="zona">
+                            Ubicación:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="zona"
+                            name="zona"
+                            value="Centro de Pachuca"
+                            required>
+
+
+                        <label for="fecha">
+                            Fecha:
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required>
+
+
+                        <label for="hora">
+                            Hora:
+                        </label>
+
+                        <input
+                            type="time"
+                            id="hora"
+                            name="hora"
+                            required>
+
+
+                        <button
+                            type="button"
+                            class="boton"
+                            onclick="confirmarReserva()">
+
+                            Confirmar Reserva
+
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- MENSAJE DE JAVASCRIPT -->
+
+                    <div id="mensaje"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COLUMNA DEL ESPACIO -->
+
+            <div class="columna">
+
+
+                <!-- CARD -->
+
+                <div class="card">
+
+                    <h2>
+                        Detalles del espacio
+                    </h2>
+
+                    <h3>
+                        Estacionamiento Centro
+                    </h3>
+
+                    <p>
+                        <strong>Ubicación:</strong>
+                        Centro de Pachuca
+                    </p>
+
+                    <p>
+                        <strong>Precio:</strong>
+                        $20 por hora
+                    </p>
+
+                    <p>
+                        <strong>Disponibilidad:</strong>
+                        5 espacios
+                    </p>
+
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="button"
+                        class="boton"
+                        onclick="abrirModal()">
+
+                        Reservar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- MODAL -->
+
+    <div id="miModal" class="modal">
+
+        <div class="modal-contenido">
+
+            <h2>
+                Confirmar reserva
+            </h2>
+
+            <p>
+                ¿Deseas confirmar la reserva de este espacio?
+            </p>
+
+
+            <button
+                type="button"
+                onclick="cerrarModal()">
+
+                Cancelar
+
+            </button>
+
+
+            <button
+                type="button"
+                class="boton"
+                onclick="confirmarDesdeModal()">
+
+                Confirmar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            2026 Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
